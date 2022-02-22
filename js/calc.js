@@ -48,8 +48,10 @@ function romanToArabic(romanNumber){
     return num;
   }
 
-  romanToArabic('')
+  let r = 'I';
 
+  romanToArabic(r)
+  
 
   function check(str) {
     if (/^[IVXLCDMZ]+/i.test(str)) {
