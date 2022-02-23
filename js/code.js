@@ -1,3 +1,4 @@
+/*
 
 function generateRange(arg1, arg2, arg3) {
     const array = [];
@@ -42,21 +43,71 @@ function generateRange(arg1, arg2, arg3) {
 // 4 * 4 = 16 -  3 = 13
 // 5 * 4 = 20 -  3 = 17
 
+/*
+
 generateRange(2, 10, 2); //  [2, 4, 6, 8,  10];
 generateRange(1, 10, 3); //  [1, 4, 7, 10, 13];
 generateRange(1, 10, 4); //  [1, 5, 9, 13, 17];
 
+*/
 
+function toCamelCase(str) {
 
-// function toCamelCase(str){
+    // for (let i = 0; i < str.length; i++) {
+    //     if (str[i] == '-') {
+    //         //txt.push(str[i + 1].toUpperCase());
+    //         k.push(i);
+    //     } else {
+    //         j.push(str[i]);
+    //     }
+    // }
 
-//     let i = 0;
-//     while (i < str.length) {
-//         console.log(str[i]);
-//         i++;
-//     }
+//    let res = j.reduce((acc, item, i) => {
+//        k.filter((num) => {
+//            if (num == i) {
+//                acc.push(item);
+//            }
+//        })
 
-//     console.log(txt);
-// }
+//        return acc;
+//     }, []);
+
+//     console.log(res);
+//     txt = j.join('');
+
+    let res;
+    let k = [];
+    let j = [];
+
+    for (let i = 0; i < str.length; i++) {
+            if (str[i] == '-') {
+                k.push(i);
+            } else {
+                j.push(str[i]);
+            }
+    }
+
+    console.log(k);
+    console.log(j);
+
+    let txt = j.join('');
+    console.log(txt);
+    
+    for (let i = 0; i < k.length; i++) {
+        res = txt.charAt(k[i]).toUpperCase()
+        console.log(res);
+    }
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === '-') {
+    //         k.push(i);
+    //     } else {
+    //         j.push(arr[i]);
+    //     }
+    // }
+
+    // length
+    console.log(str.length);
+}
   
-//   toCamelCase('the-stealth-warrior'); // theStealthWarrior
+toCamelCase('the-stealth-warrior'); // theStealthWarrior
